@@ -221,34 +221,16 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-1.png',
-                  width: 140,
-                ),
-                Text(
-                  'Liburan Jogja',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
-                  width: 140,
+                  width: 100,
                 ),
                 Text(
                   'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -257,16 +239,16 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-3.png',
-                  width: 140,
+                  width: 110,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -275,34 +257,16 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-1.png',
-                  width: 140,
+                  width: 100,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-1.png',
-                  width: 140,
-                ),
-                Text(
-                  'Liburan Pantai Indah',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 2.300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -311,16 +275,34 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-3.png',
-                  width: 140,
+                  width: 110,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-1.png',
+                  width: 100,
+                ),
+                Text(
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -329,16 +311,16 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-3.png',
-                  width: 140,
+                  width: 110,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -347,16 +329,34 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-1.png',
-                  width: 140,
+                  width: 100,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-3.png',
+                  width: 110,
+                ),
+                Text(
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -365,16 +365,34 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-1.png',
-                  width: 140,
+                  width: 100,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-3.png',
+                  width: 110,
+                ),
+                Text(
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
@@ -383,16 +401,106 @@ class _Item_homeState extends State<Item_home> {
               children: [
                 Image.asset(
                   'assets/Saly-1.png',
-                  width: 140,
+                  width: 100,
                 ),
                 Text(
-                  'Liburan Pantai Indah',
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
                 Text(
-                  'Rp. 2.300.000',
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-3.png',
+                  width: 110,
+                ),
+                Text(
+                  'Liburan Bali',
                   style: primaryTextStyle.copyWith(fontWeight: bold),
                 ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-1.png',
+                  width: 100,
+                ),
+                Text(
+                  'Liburan Bali',
+                  style: primaryTextStyle.copyWith(fontWeight: bold),
+                ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-3.png',
+                  width: 110,
+                ),
+                Text(
+                  'Liburan Bali',
+                  style: primaryTextStyle.copyWith(fontWeight: bold),
+                ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-1.png',
+                  width: 100,
+                ),
+                Text(
+                  'Liburan Bali',
+                  style: primaryTextStyle.copyWith(fontWeight: bold),
+                ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
+              ],
+            ),
+          ),
+          Card(
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/Saly-3.png',
+                  width: 110,
+                ),
+                Text(
+                  'Liburan Bali',
+                  style: primaryTextStyle.copyWith(fontWeight: bold),
+                ),
+                Text(
+                  'Rp. 200.000',
+                  style: priceTextStyle.copyWith(fontWeight: medium),
+                )
               ],
             ),
           ),
