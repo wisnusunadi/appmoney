@@ -16,7 +16,624 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
+class Detail extends StatefulWidget {
+  @override
+  State<Detail> createState() => _DetailState();
+}
+
+class _DetailState extends State<Detail> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: BackButton(
+          color: Colors.black,
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(left: 10, top: 40),
+          child: Column(
+            children: [
+              Center(
+                child: Text(
+                  'Your Saving',
+                  style: primaryTextStyle.copyWith(
+                    fontWeight: bold,
+                    fontSize: 23,
+                  ),
+                ),
+              ),
+              Image.asset(
+                'assets/Saly-3.png',
+                height: 250,
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+                width: 323,
+                height: 151,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 2),
+                      ),
+                    ]),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Belanja motor baru',
+                          style: primaryTextStyle.copyWith(fontWeight: bold),
+                        ),
+                        Container(
+                          width: 100,
+                          decoration: BoxDecoration(
+                              color: Color.fromRGBO(237, 237, 237, 1.000),
+                              borderRadius: BorderRadius.circular(6)),
+                          child: Center(
+                            child: Text(
+                              '1 Bulan lalu',
+                              style: dangerTextStyle.copyWith(fontWeight: bold),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Rp. 158.000 - Rp. 710.000',
+                        style: priceTextStyle.copyWith(
+                            fontSize: 16, fontWeight: medium),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 20),
+                      width: 300,
+                      height: 10,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        child: LinearProgressIndicator(
+                          value: 0.7,
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                              Color.fromARGB(255, 24, 7, 255)),
+                          backgroundColor: Color.fromRGBO(237, 237, 237, 1.000),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 8, right: 3),
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color.fromRGBO(237, 237, 237, 1.000),
+                              image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/ic_round-send.png'))),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 3, right: 3),
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color.fromRGBO(237, 237, 237, 1.000),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/ic_round-add-circle.png'))),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 3, right: 8),
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color.fromRGBO(237, 237, 237, 1.000),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/ic_twotone-more-vert.png'))),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Transaksi',
+                  style: primaryTextStyle.copyWith(
+                    fontWeight: bold,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                child: ListView(
+                  children: [
+                    Card(
+                      margin: EdgeInsets.only(right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-add.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Top Up GoPay',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    'Hari ini',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 50.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-add.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Top Up OVO',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    'Kemarin',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 25.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-minus.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Bayar tagihan',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    'Kemarin',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 125.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-add.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Gajian',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '25 Oktober 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 1.025.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-minus.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Bayar Cicilan I-Phone',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '1 Oktober 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 25.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-minus.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Bayar Cicilan Rumah',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '20 September 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 525.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-minus.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Go Food',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '10 September 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 25.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-add.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Gajian',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '1 September 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 1.025.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-add.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Projek client',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '14 Agustus 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 725.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.only(top: 10, right: 10),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              height: 54,
+                              width: 54,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/ic_round-minus.png')),
+                                  color: Color.fromRGBO(237, 237, 237, 1.000),
+                                  borderRadius: BorderRadius.circular(6)),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Service Motor',
+                                    style: primaryTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 16),
+                                  ),
+                                  Text(
+                                    '1 Agustus 2022',
+                                    style: priceTextStyle.copyWith(
+                                        fontWeight: medium, fontSize: 14),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Align(
+                              child: Text(
+                                'Rp. 125.000',
+                                style: primaryTextStyle.copyWith(
+                                    fontWeight: semiBold, fontSize: 18),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,7 +781,7 @@ class Home extends StatelessWidget {
                               ],
                             ),
                             Text(
-                              'Rp. 158.000 - Rp. 0.000',
+                              'Rp. 158.000 - Rp. 710.000',
                               style: priceTextStyle.copyWith(
                                   fontSize: 16, fontWeight: medium),
                             ),
@@ -190,11 +807,8 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                  margin: EdgeInsets.only(
-                    right: 22,
-                    left: 15,
-                  ),
+              SizedBox(
+                  height: MediaQuery.of(context).size.height,
                   child: Item_home())
             ],
           ),
@@ -216,6 +830,246 @@ class _Item_homeState extends State<Item_home> {
         shrinkWrap: true,
         crossAxisCount: 2,
         children: <Widget>[
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 100,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 110,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 100,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 110,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 100,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-3.png',
+                    width: 110,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-3.png',
+                    width: 100,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-3.png',
+                    width: 110,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-3.png',
+                    width: 100,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Route route = MaterialPageRoute(builder: (context) => Detail());
+              Navigator.push(context, route);
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/Saly-1.png',
+                    width: 110,
+                  ),
+                  Text(
+                    'Liburan Bali',
+                    style: primaryTextStyle.copyWith(fontWeight: bold),
+                  ),
+                  Text(
+                    'Rp. 200.000',
+                    style: priceTextStyle.copyWith(fontWeight: medium),
+                  )
+                ],
+              ),
+            ),
+          ),
           Card(
             child: Column(
               children: [
@@ -274,7 +1128,7 @@ class _Item_homeState extends State<Item_home> {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/Saly-3.png',
+                  'assets/Saly-1.png',
                   width: 110,
                 ),
                 Text(
@@ -310,187 +1164,7 @@ class _Item_homeState extends State<Item_home> {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/Saly-3.png',
-                  width: 110,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
                   'assets/Saly-1.png',
-                  width: 100,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
-                  width: 110,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-1.png',
-                  width: 100,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
-                  width: 110,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-1.png',
-                  width: 100,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
-                  width: 110,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-1.png',
-                  width: 100,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
-                  width: 110,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-1.png',
-                  width: 100,
-                ),
-                Text(
-                  'Liburan Bali',
-                  style: primaryTextStyle.copyWith(fontWeight: bold),
-                ),
-                Text(
-                  'Rp. 200.000',
-                  style: priceTextStyle.copyWith(fontWeight: medium),
-                )
-              ],
-            ),
-          ),
-          Card(
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/Saly-3.png',
                   width: 110,
                 ),
                 Text(
